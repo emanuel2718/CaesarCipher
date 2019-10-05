@@ -91,10 +91,19 @@ public class Main {
 		}
 	}
 
+	// Calls the Encryptor class to perform the encryption process
 	private static void messageDecryptor(String message, int keyShift) {
+		System.out.println("Encrypting the message...");
+		Encryptor theEncryptor = new Encryptor(keyShift);
+		System.out.println("Your encrypted message is: " + theEncryptor.encryptMessage(message, keyShift) + "\n");
+		System.out.println("Thank you for using the CaesarCipher CLI. Please, come back soon.\n");
 	}
 
 	private static void messageEncryptor(String message, int keyShift) {
+		System.out.println("Encrypting the message...");
+		Decryptor theDecryptor = new Decryptor(keyShift);
+		System.out.println("Your encrypted message is: " + theDecryptor.decryptMessage(message, keyShift) + "\n");
+		System.out.println("Thank you for using the CaesarCipher CLI. Please, come back soon.\n");
 	}
 
 }
