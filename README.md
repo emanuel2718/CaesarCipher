@@ -1,5 +1,6 @@
 # CaesarCipher CLI Edition:
-    Simple command line interface Caesar Cipher implementation to learn how the cipher works and practice basic java programming  skills.
+    Simple command line interface Caesar Cipher implementation to learn
+    how the cipher works and practice basic java programming skills.
     
 ## How it works:
 
