@@ -1,8 +1,11 @@
 public class Decryptor {
+    int keyShift;
+
     public Decryptor(int keyShift) {
+        this.keyShift = keyShift;
     }
 
-    public String decryptMessage(String message, int keyShift) {
-        return null;
+    public static String decryptMessage(String message, int keyShift) {
+        return Encryptor.encryptMessage(message, 26 - keyShift);
     }
 }

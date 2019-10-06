@@ -46,7 +46,7 @@ public class Main {
 			 */
 
 			if (choiceNumber.equals("1")) {
-				System.out.println("Provide a value for your key shift. Must be a positive integer \n");
+				System.out.println("Provide a value for your key shift. Must be a positive integer");
 				System.out.print("Key shift: ");
 				// Check if key shift value provided is legal (i.e positive integer number)
 				try {
@@ -64,7 +64,7 @@ public class Main {
 				messageEncryptor(message, keyShift);
 			}
 			else if (choiceNumber.equals("2")) {
-				System.out.println("Provide a value for your key shift. Must be a positive integer \n");
+				System.out.println("Provide a value for your key shift. Must be a positive integer");
 				System.out.print("Key shift: ");
 				// Check if key shift value provided is legal (i.e positive integer number)
 				try {
@@ -92,18 +92,20 @@ public class Main {
 	}
 
 	// Calls the Encryptor class to perform the encryption process
-	private static void messageDecryptor(String message, int keyShift) {
-		System.out.println("Encrypting the message...");
-		Encryptor theEncryptor = new Encryptor(keyShift);
-		System.out.println("Your encrypted message is: " + theEncryptor.encryptMessage(message, keyShift) + "\n");
-		System.out.println("Thank you for using the CaesarCipher CLI. Please, come back soon.\n");
-	}
-
 	private static void messageEncryptor(String message, int keyShift) {
 		System.out.println("Encrypting the message...");
-		Decryptor theDecryptor = new Decryptor(keyShift);
-		System.out.println("Your encrypted message is: " + theDecryptor.decryptMessage(message, keyShift) + "\n");
-		System.out.println("Thank you for using the CaesarCipher CLI. Please, come back soon.\n");
+		//Encryptor theEncryptor = new Encryptor(keyShift);
+		System.out.println("Your encrypted message is: " + Encryptor.encryptMessage(message, keyShift));
+		System.out.println("\n" + "Thank you for using the CaesarCipher CLI. Please, come back soon.\n");
+		System.exit(0);
+	}
+
+	private static void messageDecryptor(String message, int keyShift) {
+		System.out.println("Decrypting the message...");
+		//Decryptor theDecryptor = new Decryptor(keyShift);
+		System.out.println("Your decrypted message is: " + Decryptor.decryptMessage(message, keyShift));
+		System.out.println("\n" + "Thank you for using the CaesarCipher CLI. Please, come back soon.\n");
+		System.exit(0);
 	}
 
 }
